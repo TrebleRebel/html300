@@ -128,3 +128,14 @@ a:hover{
 #menuHamToggle input:checked ~ ul {
     transform: none;
 }
+
+/* Placeholder Image and Text */
+img {
+  display: block;
+  margin: auto;
+
+}
+
+.placeholder {
+  text-align: center;
+}
