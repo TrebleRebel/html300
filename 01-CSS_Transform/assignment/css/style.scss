@@ -1,34 +1,23 @@
-$text-color: #92e4e8;
-$text-hover: #ffffff;
-$text-hover-fade: #63c1f7;
-$menu-background-color: #2d3e47;
-$menu-background-hover: #0a7da1;
-$divider-color: #09a6d6;
-
-@mixin site-body {
-  color: white;
-  background-color: #232323;
-}
-
 
 /* Lets give a color of the body */
 body{
     margin: 0;
     padding: 0;
-    @include site-body;
+    background: #232323;
+    color: #cdcdcd;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* Change the link properties */
 a{
     text-decoration: none;
-    color: $text-color;
+    color: #c27c7c;
     transition: color 0.3s ease;
 }
 
 /* Hover effect of the link */
 a:hover{
-    color: $text-hover-fade;
+    color: tomato;
 }
 
 /* Position the hamburger menu */
@@ -65,9 +54,9 @@ a:hover{
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.1, 0.2, 0.5, 1.0),
-                background 0.5s cubic-bezier(0.1, 0.2, 0.5, 1.0),
-                opacity 0.5s ease;
+    transition: transform 0.7s cubic-bezier(0.1, 0.2, 0.5, 1.0),
+                background 0.7s cubic-bezier(0.1, 0.2, 0.5, 1.0),
+                opacity .7s ease;
 }
 
 
@@ -83,7 +72,7 @@ a:hover{
 #menuHamToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #cdcdcd;
+    background: #f30606;
 }
 /* Hiding the middle one to make perfect cross */
 #menuHamToggle input:checked ~ span:nth-last-child(3){
@@ -104,11 +93,11 @@ a:hover{
     margin: -100px 0 0 -50px;
     padding: 0px;
     padding-top: 125px;
-    background: $menu-background-color;
+    background: #f1ecec;
     list-style-type: none;
     transform-origin: 0% 0%;
     transform: translate(0%, -100%); /* Just change the value to animate it from another direction */
-    transition: transform 0.5s cubic-bezier(0.55, 0.2, 0.05, 1.0);
+    transition: transform 1s cubic-bezier(0.55, 0.2, 0.05, 1.0);
 }
 
 #mainMenu li{
@@ -116,12 +105,12 @@ a:hover{
     font-size: 22px;
     background: none;
     text-align: center;
-    border-top: 1px solid $divider-color;
+    border-top: 1px solid #c27c7c;
 }
 
 #mainMenu li:hover {
-    background: $menu-background-hover;
-    color: $text-hover;
+    background: #c27c7c;
+    color: #cdcdcd;
 }
 
 /* Slide it on click */
@@ -129,13 +118,17 @@ a:hover{
     transform: none;
 }
 
-/* Placeholder Image and Text */
-img {
-  display: block;
-  margin: auto;
-
+.yvanaplaceholder{
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
-.placeholder {
-  text-align: center;
+.yvana{
+  color: darkgreen;
+  text-decoration: none;
+ }
+
+.name{
+  color: crimson;
 }
