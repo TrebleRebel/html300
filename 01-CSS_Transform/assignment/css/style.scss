@@ -65,9 +65,9 @@ a:hover{
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
-    transition: transform 0.7s cubic-bezier(0.1, 0.2, 0.5, 1.0),
-                background 0.7s cubic-bezier(0.1, 0.2, 0.5, 1.0),
-                opacity .7s ease;
+    transition: transform 0.5s cubic-bezier(0.1, 0.2, 0.5, 1.0),
+                background 0.5s cubic-bezier(0.1, 0.2, 0.5, 1.0),
+                opacity 0.5s ease;
 }
 
 
@@ -108,7 +108,7 @@ a:hover{
     list-style-type: none;
     transform-origin: 0% 0%;
     transform: translate(0%, -100%); /* Just change the value to animate it from another direction */
-    transition: transform 1s cubic-bezier(0.55, 0.2, 0.05, 1.0);
+    transition: transform 0.5s cubic-bezier(0.55, 0.2, 0.05, 1.0);
 }
 
 #mainMenu li{
