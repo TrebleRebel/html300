@@ -1,0 +1,127 @@
+/* Lets give a color of the body */
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: #232323;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Change the link properties */
+a {
+  text-decoration: none;
+  color: #92e4e8;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect of the link */
+a:hover {
+  color: #63c1f7;
+}
+
+/* Position the hamburger menu */
+#menuHamToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+/* toggle on click item */
+#menuHamToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+/* Making hamburger */
+#menuHamToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.1, 0.2, 0.5, 1), background 0.5s cubic-bezier(0.1, 0.2, 0.5, 1), opacity 0.5s ease;
+}
+
+#menuHamToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuHamToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* Rotate the hamburger on cross mark on click */
+#menuHamToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #cdcdcd;
+}
+
+/* Hiding the middle one to make perfect cross */
+#menuHamToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/* Change the direction of last one */
+#menuHamToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* Position the menu on the top left */
+#mainMenu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 0px;
+  padding-top: 125px;
+  background: #2d3e47;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(0%, -100%); /* Just change the value to animate it from another direction */
+  transition: transform 0.5s cubic-bezier(0.55, 0.2, 0.05, 1);
+}
+
+#mainMenu li {
+  padding: 10px 10px;
+  font-size: 22px;
+  background: none;
+  text-align: center;
+  border-top: 1px solid #09a6d6;
+}
+
+#mainMenu li:hover {
+  background: #0a7da1;
+  color: #ffffff;
+}
+
+/* Slide it on click */
+#menuHamToggle input:checked ~ ul {
+  transform: none;
+}
+
+/* Placeholder Image and Text */
+img {
+  display: block;
+  margin: auto;
+}
+
+.placeholder {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
